@@ -103,7 +103,7 @@ body {
     font-weight: 500;
 
     display: flex;
-    justify-content: left;
+    justify-content: space-around;
 
     padding: 0;
 }
