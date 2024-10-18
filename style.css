@@ -1,0 +1,134 @@
+:root {
+    --color-bg-line: #EAEAEA;
+    --color-body-bg: #FCFCFC;
+
+    --color-bold-text: #4E60E2;
+    --color-text: #FCFCFC;
+    --color-container-bg: #303030;
+}
+
+body {
+    background-color: var(--color-body-bg);
+    background-image: url("Images/White-background-grid.png");
+    background-position: center;
+    background-size: 300px 300px;
+    background-repeat: repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg-line: #303030;
+        --color-body-bg: #292929;
+        --color-bold-text: #4E60E2;
+        --color-text: #292929;
+        --color-container-bg: #EAEAEA;
+    }
+
+    body {
+        background-image: url("Images/Black-background-grid.png");
+    }
+}
+
+/* Обычный */
+@font-face {
+    font-family: 'Inter';
+    src: url(/Fonts/Inter-Medium.ttf);
+}
+
+/* Жирный */
+@font-face {
+    font-family: 'Inter bold';
+    src: url(/Fonts/Inter-Bold.ttf);
+}
+
+/* Обычный */
+@font-face {
+    font-family: 'Gilroy';
+    src: url(/Fonts/Gilroy-Light.otf);
+}
+
+/* Жирный */
+@font-face {
+    font-family: 'Gilroy bold';
+    src: url(/Fonts/Gilroy-ExtraBold.otf);
+}
+
+.container {
+    /* display: flex;
+  justify-content: center;
+  flex-direction: column; */
+
+    background-color: var(--color-container-bg);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba\(0, 0, 0, 0.1\);
+    padding: 20px;
+    text-align: center;
+    width: 80vw;
+    max-width: 500px;
+    /* Ширина контейнера */
+}
+
+.container img {
+    width: 100%;
+    /* Занимает всю ширину контейнера */
+    height: auto;
+    /* Сохраняет пропорции изображения */
+    border-radius: 5px;
+}
+
+.container h2 {
+    color: var(--color-bold-text);
+    font-size: 3em;
+    font-weight: 700;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+
+    font-family: sans-serif;
+}
+
+.container ul {
+
+    /* Убирает буллиты */
+    list-style-type: none;
+    font-size: 1.5em; 
+    font-family: sans-serif;
+    font-weight: 500;
+
+    display: flex;
+    justify-content: left;
+
+    padding: 0;
+}
+
+.container li {
+    margin-bottom: 0.5em;
+
+}
+
+.container a {
+    color: var(--color-text);
+    /* Цвет ссылок */
+    text-decoration: none;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px){
+    .container ul{
+        font-size: 1em;
+    }
+
+    .container h2{
+        font-size: 2em;
+    }
+}

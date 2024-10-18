@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример сайта</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="Images/Лого новое поколение.png" alt="Какое-то красивое изображение" id="logo">
+        <h2>Пиксельные Гении</h2>
+        <ul>
+            <li><a href="https://vk.com/weepingsky">Сообщество ВКонтакте >*тык*< </a>
+            </li>
+            <li><a href="https://t.me/mifiklik">Telegram Евгения >*тык*< </a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const mql = window.matchMedia("(prefers-color-scheme: dark)");
+
+        function screenTest(e) {
+            const logo = document.getElementById("logo");
+            if (e.matches) {
+                logo.textContent = "Images/Лого новое поколение тёмное.png";
+            } else {
+                logo.textContent = "Images/Лого новое поколение.png";
+            }
+        }
+
+
+        mql.addEventListener("change", screenTest);
+        screenTest(mql);
+    </script>
+</body>
+
+</html>
